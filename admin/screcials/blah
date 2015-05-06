@@ -1,0 +1,38 @@
+<cfif QScrecial.sco_type_id is "3">
+                     <div id="PreDescrIMG" >
+                     <cfif task is "Add">
+                        <input type="hidden" name="sco_descIMG" id="sco_descIMG">
+                        <img alt="..." id="scrIMG" style="width: 60px; height: 130px;">
+                     <cfelseif task is "Edit" and QScrecial.sco_descIMG NEQ "">
+                        <!---input type="hidden" name="sco_descIMG" id="sco_descIMG"--->
+                        <cfif #QScrecial.sco_descDisplay# is "1">   
+                        <img alt="..." id="scrIMG" src="../sitetemplate/images/screcials/descriptions/#QScrecial.sco_DescIMG#" style="width: 60px; height: 130px;">
+                        </cfif>
+                        
+                     </cfif>
+                     </div>
+                     <cfelse>
+                        
+                        <cfif task is "edit" and QScrecial.sco_descIMG NEQ "">
+                         <!---input type="hidden" name="sco_descIMG" id="sco_descIMG" value="#QScrecial.sco_DescIMG#"--->
+                           <img alt="..." id="scrIMG" src="../sitetemplate/images/screcials/descriptions/#QScrecial.sco_DescIMG#" style="width: 60px; height: 130px; float:left;">
+                           <cfelse>
+                           <div id="PreDescrIMG" style="display: none;" class="fileinput fileinput-new" data-provides="fileinput">
+                              <div class="fileinput-new thumbnail" style="width: 60px; height: 130px;">
+                              <img alt="..." id="scrIMG">
+                        </div>
+                        <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 60px; max-height: 130px;">
+                      
+                        </div>
+                        <div id="IMGSelect">
+                        <span class="btn btn-default btn-file">
+                           <span class="fileinput-new">Select image</span>
+                           <span class="fileinput-exists">Change</span>
+                           <input type="file" name="sco_descIMG" id="sco_descIMG">
+                        </span>
+                        <span class="fileinput-exists btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</span>
+                        </div>
+                  </div>
+                        </cfif>
+                        
+                  </cfif>
