@@ -7,3 +7,5 @@ ColdFusion and jQuery Powered Online ScratchOff Project
 This was a Project I developed for an online ScratchOff. It is compatible on Desktop, Tablet and Mobile Devices.
 
 It uses ColdFusion, jQuery and a Database.
+
+Tested on ColdFusion 9 & 10, Railo 4.1
